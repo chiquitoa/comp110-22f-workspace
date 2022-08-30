@@ -3,7 +3,7 @@
 i: int = 0
 s: str = ""
 
-while i < 40:
+while i <=6:
     if i % 2 == 0:
         s = s + "h"
     else:
