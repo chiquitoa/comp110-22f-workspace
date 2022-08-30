@@ -1,8 +1,6 @@
 """A Wordle variation with one chance to guess the word."""
 
-__Author__ = "730295419"
-
-from xml.dom.expatbuilder import FragmentBuilderNS
+__author__ = "730295419"
 
 # Define variables and set them up in a neautral state where necessary
 WHITE_BOX: str = "\U00002B1C"
@@ -39,7 +37,7 @@ while index < len(answer):
     else:
 
         # Compares each letter in the answer to the current letter in the guess
-        while yellow_presence == False and yellow_index < len(answer):
+        while yellow_presence is False and yellow_index < len(answer):
             if guess[index] == answer[yellow_index]:
                 yellow_presence = True
                 yellow_index = yellow_index + 1
@@ -47,11 +45,11 @@ while index < len(answer):
                 yellow_index = yellow_index + 1
 
     # Tests each variable denoting presence of each color to determine what color that letter in the guess should be
-    if yellow_presence == True:
+    if yellow_presence is True:
         result = result + YELLOW_BOX
-    if green_presence == True:
+    if green_presence is True:
         result = result + GREEN_BOX
-    if yellow_presence == False and green_presence == False:
+    if yellow_presence is False and green_presence is False:
         result = result + WHITE_BOX
 
     # print(result) # To print results per letter for troubleshooting.
