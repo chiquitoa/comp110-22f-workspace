@@ -46,11 +46,11 @@ while index < len(answer):
 
     # Tests each variable denoting presence of each color to determine what color that letter in the guess should be
     if yellow_presence is True:
-        result = result + YELLOW_BOX
-    if green_presence is True:
-        result = result + GREEN_BOX
-    if yellow_presence is False and green_presence is False:
-        result = result + WHITE_BOX
+        result += YELLOW_BOX
+    elif green_presence is True:
+        result += GREEN_BOX
+    else:
+        result += WHITE_BOX
 
     # print(result) # To print results per letter for troubleshooting.
     index = index + 1
