@@ -2,12 +2,15 @@
 
 __author__ = "730295419"
 
+
 def all(collection: list[int], item: int) -> bool:
     """Determines whether a given item matches every item in a given list."""
-    
     i: int = 0
     
-    while i == 0 or i <= (len(collection) - 1):
+    if collection == []:
+        return (False)
+
+    while i <= (len(collection) - 1):
         if collection[i] == item:
             i += 1
         else:
@@ -17,14 +20,15 @@ def all(collection: list[int], item: int) -> bool:
 
 def max(input: list[int]) -> int:
     """Returns the highest value in a provided list."""
-    
     i: int = 0
     answer: int = 0
     
     if len(input) == 0:
         raise ValueError("max() arg is an empty List")
     
-    while i <= (len(input) -1):
+    answer = input[0]
+
+    while i <= (len(input) - 1):
         if input[i] > answer:
             answer = input[i]
             i += 1
@@ -32,12 +36,14 @@ def max(input: list[int]) -> int:
             i += 1
     return (answer)
 
+
 def is_equal(input: list[int], compare: list[int]) -> bool:
     """Informs whether two given lists are identical or not."""
-
     i: int = 0
+    if len(input) != len(compare):
+        return (False)
 
-    while i <= (len(input) -1):
+    while i <= (len(input) - 1):
         if input[i] == compare[i]:
             i += 1
         else:
