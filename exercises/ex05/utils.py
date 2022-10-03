@@ -2,8 +2,6 @@
 
 __Author__ = "730295419"
 
-from tracemalloc import start
-
 
 def only_evens(given_list: list[int]) -> list[int]:
     """Takes a list of ints and returns a list of only the even values."""
@@ -17,6 +15,7 @@ def only_evens(given_list: list[int]) -> list[int]:
             # print(f"even_list is now {even_list}") # For troubleshooting
         i += 1
     return (even_list)
+
 
 def concat(list1: list[int], list2: list[int]) -> list[int]:
     """Takes two lists and concatenates them into a single list."""
@@ -32,6 +31,7 @@ def concat(list1: list[int], list2: list[int]) -> list[int]:
         whole_list.append(list2[i])
         i += 1
     return (whole_list)
+
 
 def sub(list1: list[int], start: int, end: int) -> list[int]:
     """Takes a list and returns a requested subset."""
