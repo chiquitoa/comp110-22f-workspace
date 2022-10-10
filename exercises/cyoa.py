@@ -213,12 +213,12 @@ def main() -> None:
             points = trail(points)
             trail_visit = True
             if points >= 100:
-                exit()
+                quit()
         # Provides the option to quit the game early
         elif choice == "5":
             exit = input("You hoppity hop over to the hole. As you gaze into the abyss, you realize that if you hop in there, you'll become human again. But you won't be a good frog, and that might weigh on your conscience. Are you sure you want to quit? (y/n) : ")
             while exit != "y" and exit != "n":
-                exit = input(f"{player}, you have to decide one way or the other! No judgement... or maybe just a little, we made a good froggy life for you!")
+                exit = input(f"{player}, you have to decide one way or the other! No judgement... or maybe just a little, we made a good froggy life for you! : ")
             if exit == "y":
                 print("Okay, fine, we see how it is! This was part of a great cosmic experiment that, frankly, is beyond your understanding. When you next awake, you'll be human and cozy in your bed, and no time will have passed. Also you'll have no memory of your life as a frog, but you didn't want to be a frog anyway so I don't expect you'll miss it. We've put you on the cosmic experience blacklist though, so don't expect any more fun surprises!")
                 quit()
