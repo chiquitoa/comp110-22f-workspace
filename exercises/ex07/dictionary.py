@@ -3,7 +3,7 @@
 __author__ = "730295419"
 
 
-def invert_dictionary(sample: dict[str, str]) -> dict[str, str]:
+def invert(sample: dict[str, str]) -> dict[str, str]:
     """Inverts a provided dictionary."""
     inverse_sample: dict[str, str]
     inverse_sample = dict()

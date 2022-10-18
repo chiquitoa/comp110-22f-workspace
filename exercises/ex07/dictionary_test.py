@@ -4,17 +4,18 @@ __author__ = "730295419"
 
 from exercises.ex07.dictionary import invert_dictionary, favorite_color, count
 
-def test_invert_dictionary_normal() -> None:
+
+def test_invert_normal() -> None:
     """Tests inverting a dictionary under normal circumstances."""
     assert invert_dictionary({"Patrick": "Wolfe", "Andre": "Chiquito"}) == {"Wolfe": "Patrick", "Chiquito": "Andre"}
 
 
-def test_invert_dictionary_with_duplicate() -> None:
+def test_invert_with_duplicate() -> None:
     """Tests inverting a dictionary where a duplicate key results."""
     assert invert_dictionary({"Patrick": "Wolfe", "Andre": "Chiquito", "Daniel": "Chiquito"}) == {"Wolfe": "Patrick", "Chiquito": "Andre"}
 
 
-def test_invert_dictionary_empty_dict() -> None:
+def test_invert_empty_dict() -> None:
     """Tests running the function with an empty dictionary."""
     assert invert_dictionary({}) == {}
 
@@ -24,7 +25,7 @@ def test_count_normal() -> None:
     assert count(["blue", "blue", "blue", "red", "green"]) == {"blue": 3, "red": 1, "green": 1}
 
 
-def test_count_normal() -> None:
+def test_count_normal_again() -> None:
     """Tests running the count function under different normal circumstances."""
     assert count(["blue", "red", "green"]) == {"blue": 1, "red": 1, "green": 1}
 
