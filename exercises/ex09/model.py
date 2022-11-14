@@ -146,15 +146,10 @@ class Model:
         for cell in self.population:
             cell.tick()
             self.enforce_bounds(cell)
-            # if cell.sickness == constants.INFECTED:
-            #     # print(f"That's one more infected cell! The total number of infected cells is now {self.infected_cells}.")
-            #     self.infected_cells += 1
             if cell.is_infected() is True:
                 cell.sickness += 1
             if cell.sickness >= constants.RECOVERY_PERIOD:
-                # print(f"That's one cell immunized! The total number of infected cells is now down to {self.infected_cells}.")
                 cell.immunize()
-                # self.infected_cells -= 1
         self.check_contacts()
 
     def random_location(self) -> Point:
